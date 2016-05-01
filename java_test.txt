@@ -1,0 +1,51 @@
+一、基础篇
+1、解释什么是类的成员变量，局部变量，实例成员变量
+2、break和continue区别
+3、什么是方法重载？方法重写？
+4、返回值为void的方法，可否有return
+5、简述java的访问权限。  
+	a) public：公有的，任何类都可以访问。  b) protected：受保护的，同一个包的类可以访问。不同包的子类可以访问。 c) 友好的：同一个包的类可以访问。 d) private：私有的，在同一个类中才能访问
+6、子类能继承父类的哪些变量和方法？
+	a) 如果子类和父类在同一个包中，那么，子类自然地继承了其父类中不是private 的 成员变量作为自己的成员变量，并且也自然地继承了父类中不是private 的方法作为自己的方法。
+	b) 如果子类和父类不在同一个包中，那么，子类继承了父类的protected，public 成员变量做为子类的成员变量，并且继承了父类的protected，public 方法为子类的方法。
+7、final关键字可以用来修饰什么？分别起什么作用？
+	a) final可以修饰类，这样的类不能被继承。  b) final可以修饰方法，这样的方法不能被重写。  c) final可以修饰变量，这样的变量的值不能被修改，是常量。
+8、String类可以被继承吗？
+8、什么是抽象类？什么是抽象方法？有什么特点？
+	a) 用关键字abstract修饰类称为抽象类，abstract类不能用new运算创建对象，必须 产生其子类，由子类创建对象。  
+	b) 用关键字abstract修饰方法称为抽象方法，abstract方法，只允许声明，而不允许 实现。
+9、==与equals的区别
+10、set和list的特点
+11、hashmap和hashtable区别
+12、String和StringBuffer、StringBuilder区别
+13、怎么启动个线程
+14、分布式缓存 redis和memcached 比较
+15、mysql索引类型有哪些，怎么看自己写的sql是否关联到索引
+
+二、进阶篇
+1、jdk自带线程池的工作原理
+2、jdk concurrent包下的类
+3、ConcurrentHashMap数据类型、工作原理
+4、LinkedHashMap的实现原理及LRU算法
+3、synchronized和lock区别
+4、代理、策略、适配、单例设计模式
+5、什么是Spring的依赖注入，有哪些不同类型的依赖注入方式
+6、BeanFactory和ApplicationContext有什么区别？
+7、解释Spring框架中bean的生命周期。
+	Spring容器 从XML 文件中读取bean的定义，并实例化bean。
+	Spring根据bean的定义填充所有的属性。
+	如果bean实现了BeanNameAware 接口，Spring 传递bean 的ID 到 setBeanName方法。
+	如果Bean 实现了 BeanFactoryAware 接口， Spring传递beanfactory 给setBeanFactory 方法。
+	如果有任何与bean相关联的BeanPostProcessors，Spring会在postProcesserBeforeInitialization()方法内调用它们。
+	如果bean实现IntializingBean了，调用它的afterPropertySet方法，如果bean声明了初始化方法，调用此初始化方法。
+	如果有BeanPostProcessors 和bean 关联，这些bean的postProcessAfterInitialization() 方法将被调用。
+	如果bean实现了 DisposableBean，它将调用destroy()方法
+8、springMvc注入的bean为什么能调用spring注入的，但却不能反过来
+9、怎样用注解的方式配置Spring？
+10、@Autowired和@Redource区别
+11、mysql行级锁和表级锁，使用行级锁时要注意什么?间隙锁?
+
+三、高级篇
+1、系统架构
+2、性能优化
+3、系统调优
